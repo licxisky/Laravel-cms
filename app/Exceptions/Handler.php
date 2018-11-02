@@ -68,6 +68,7 @@ class Handler extends ExceptionHandler
             return response([
                 'status' => $exception->getCode(),
                 'message' => $exception->getMessage(),
+                'trace' => $exception->getTrace()
             ], 401);
         }
 
