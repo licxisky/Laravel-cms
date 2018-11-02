@@ -16,6 +16,7 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 Route::group(['middleware' => 'refresh.token'], function () {
-    Route::get('/user', 'AuthController@index');
+
+    Route::resource('/users', UserController::class);
 });
 
